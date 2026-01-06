@@ -105,3 +105,5 @@ nnoremap <silent> <BS> :nohlsearch<CR>
 set showmatch
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
+
+colorscheme default
