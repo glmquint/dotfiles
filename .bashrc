@@ -116,3 +116,8 @@ fi
 
 set -o vi
 bind '"jk":vi-movement-mode'
+
+# Automatically attach or create tmux session on ssh connection
+# if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
+#   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
+# fi
