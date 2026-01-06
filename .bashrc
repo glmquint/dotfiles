@@ -109,6 +109,9 @@ alias gcam='git commit -a -m'
 alias gcmsg='git commit --message'
 alias gloga='git log --oneline --decorate --graph --all'
 
+EDITOR=vim
+alias bashrconfig='$EDITOR ~/.bashrc && source ~/.bashrc'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
