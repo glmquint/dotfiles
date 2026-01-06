@@ -132,8 +132,26 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Fuzzy History
+fh() {
+  local cmd
+  cmd=$(
+    sed '/^[[:space:]]*$/d; s/^[[:space:]]*//; s/[[:space:]]*$//' ~/.bash_history \
+    | sort -u \
+    | fzf
+  ) || return
+
+  READLINE_LINE=$cmd
+  READLINE_POINT=${#READLINE_LINE}
+}
+
 set -o vi
 bind '"jk":vi-movement-mode'
+
+if command -v fzf >/dev/null 2>&1; then
+    bind -m vi-insert  -x '"\C-r":fh'
+    bind -m vi-command -x '"\C-r":fh'
+fi
 
 # Automatically attach or create tmux session on ssh connection
 # if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
