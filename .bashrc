@@ -94,6 +94,21 @@ alias lah='ls -lah'
 alias l='ls -CF'
 alias ..='cd ..'
 
+alias g='git'
+alias gs='git status'
+alias ga='git add'
+alias gd='git diff'
+alias gl='git pull'
+alias gf='git fetch'
+alias gp='git push'
+alias gb='git branch'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcld='git clone --depth=1'
+alias gcam='git commit -a -m'
+alias gcmsg='git commit --message'
+alias gloga='git log --oneline --decorate --graph --all'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
