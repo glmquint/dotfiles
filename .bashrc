@@ -92,6 +92,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias lah='ls -lah'
 alias l='ls -CF'
+alias ..='cd ..'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
