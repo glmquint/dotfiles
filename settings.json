@@ -1,0 +1,14 @@
+// vs code settings file
+{
+    "vim.insertModeKeyBindings": [
+        { 
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ]
+}
