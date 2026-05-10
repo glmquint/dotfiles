@@ -1,0 +1,14 @@
+! https://www.reddit.com/r/uBlockOrigin/comments/1slhwx9/sharing_my_filters_to_fix_high_cpu_usage_on/
+
+google.*##g-loading-icon._F9g._y9g
+
+! Google extra CPU usage, especially on AI pages
+www.google.com##*:style(animation: none !important;)
+
+! Google AI Mode stop 100% CPU when caret is blinking.
+www.google.com##textarea.ITIRGe:style(caret-color: auto !important;)
+www.google.com##div.CEpIFc
+
+! More robust version in case they rename the elements
+www.google.com##textarea:style(caret-color: auto !important; )
+www.google.com##textarea+div[animating-caret]
