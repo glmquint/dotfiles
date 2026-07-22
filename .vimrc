@@ -148,3 +148,5 @@ rf () (
       --preview-window '~4,+{2}+4/3,<80(up)' \
       --query "$*"
 )
+
+autocmd vimenter * hi normal guibg=NONE ctermbg=NONE
