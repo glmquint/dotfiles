@@ -135,6 +135,9 @@ fi
 set -o vi
 bind '"jk":vi-movement-mode'
 
+# restore clear-screen shortcut in vi-mode
+bind C-l:clear-screen
+
 if command -v fzf >/dev/null 2>&1; then
 	eval "$(fzf --bash)"
 fi
