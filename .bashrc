@@ -146,3 +146,8 @@ fi
 # if [[ $- =~ i ]] && [[ -z "$TMUX" ]] && [[ -n "$SSH_TTY" ]]; then
 #   tmux attach-session -t ssh_tmux || tmux new-session -s ssh_tmux
 # fi
+
+alias urlencode='python3 -c "import sys, urllib.parse as ul; \
+    print(ul.quote_plus(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read().rstrip('\''\n'\'')))"'
+alias urldecode='python3 -c "import sys, urllib.parse as ul; \
+    print(ul.unquote_plus(sys.argv[1] if len(sys.argv) > 1 else sys.stdin.read().rstrip('\''\n'\'')))"'
