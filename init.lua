@@ -1183,7 +1183,7 @@ function Python_run()
 	-- Save the current file
 	vim.cmd("write")
 	-- Open a new split and run the current Python file in a terminal
-	vim.cmd("belowright split | term python3 " .. vim.fn.expand("%"))
+	vim.cmd("belowright split | term rlwrap python3 " .. vim.fn.expand("%"))
 	-- Enter insert mode
 	vim.cmd("startinsert")
 end
